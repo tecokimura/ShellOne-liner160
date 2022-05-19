@@ -19,4 +19,14 @@ ENV LANG ja_JP.UTF-8
 # One-liner用のインストール
 RUN apt-get install -y manpages-ja manpages-ja-dev
 RUN apt-get install -y bc ruby num-utils
-RUN apt-get install -y gawk
+RUN apt-get install -y gawk wget
+
+# https://www.forcia.com/blog/002273.html
+RUN useradd -ms /bin/bash newuser
+USER newuser
+WORKDIR /home/newuser
+
+# sample dataをダウンロードしておく
+RUN cd /home/newuser
+RUN wget https://github.com/shellgei/shellgei160/archive/refs/heads/master.zip -O shellgei160.zip
+RUN unzip ./shellgei160.zip
