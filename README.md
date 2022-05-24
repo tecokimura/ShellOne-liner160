@@ -13,7 +13,8 @@ docker build -t ubuntu2004 .
 ## run.sh
 docker run -it ubuntu2004 /bin/bash
 
-### Man
+### man
 imageが大きくなりそうなのでとりあえず後回し
 
-# 
+# Current Progress
+22/05/24 - 128 / 1074 page. No. 1995/14781
